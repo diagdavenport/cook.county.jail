@@ -1,0 +1,117 @@
+# Data dictionary
+
+**Booking Sample Set** (Bookings Between 01/01/2018 and 06/29/2018 with at least 2 months in custody)
+
+BookingID - Booking Number - Primary Key across all data sets
+
+Gender - Detainee Gender
+
+Age at Booking - Detainee's Age at Booking
+
+Booking Date - Date Detainee was booked into jail
+
+Release Date - Date Detainee was Release from jail.  If NULL or blank Detainee is still in custody
+
+ 
+
+**Housing Sample Set**
+
+BookingID - Booking Number - Primary Key across all data sets
+
+Facility - Facility detainee was housed in
+
+Section - Tier and/or Section detainee was housed in
+
+Cell - Cell detainee was housed in
+
+Bed Assignment - Bed detainee was assigned to
+
+Bed Start Date - Start Date and Time detainee was assigned to bed
+
+Bed End Date - End Date and Time of bedding assignment. If NULL or blank Detainee is still assigned to bed
+
+ 
+
+**Movement Sample Set**
+
+BookingID - Booking Number - Primary Key across all data sets
+
+Scan Location - Location where detainee was scanned
+
+Movement Reason - Movement reason for detainee
+
+Move From - Movement From Location
+
+Move To - Movement To Location
+
+Movement Date - Date and Time Movement Occurred
+
+ 
+
+**Incidents**
+
+BookingID - Booking Number - Primary Key across all data sets 1 per row
+
+BookingID Type - If booking number is part of Sample Set or if it is an addition to sample set (Non Sample Set BookingID)
+
+Incident Number - Incident Number - Secondary key to Infractions Tab
+
+Incident DateTime - Date and Time of Incident
+
+Incident Facility Location - Facility of Incident
+
+Incident Location - Location of Incident
+
+Incident Type - Type of Incident
+
+Incident Category - Categories of incident 1 per row
+
+ 
+
+**Infractions** - Based on Incident Number from Incidents
+
+BookingID - Booking Number - Primary Key across all data sets 1 per row
+
+BookingID Type - If booking number is part of Sample Set or if it is an addition to sample set (Non Sample Set BookingID)
+
+Incident Number - Incident Number - Secondary key to Infractions Tab
+
+Incident DateTime - Date and Time of Incident
+
+Incident Facility Location - Facility of Incident
+
+Incident Location - Location of Incident
+
+Infraction - Infraction detainee was charged with 1 per row
+
+ 
+
+**Booking Non Sample Set** - BookingID from Incidents that are not included in the sample set
+
+BookingID - Booking Number - Primary Key across all data sets
+
+Gender - Detainee Gender
+
+Age at Booking - Detainee's Age at Booking
+
+Booking Date - Date Detainee was booked into jail
+
+Release Date - Date Detainee was Release from jail.  If NULL or blank Detainee is still in custody
+
+ 
+
+**Housing Non Sample Set** - BookingID from Incidents that are not included in the sample set
+
+BookingID - Booking Number - Primary Key across all data sets
+
+Facility - Facility detainee was housed in
+
+Section - Tier and/or Section detainee was housed in
+
+Cell - Cell detainee was housed in
+
+Bed Assignment - Bed detainee was assigned to
+
+Bed Start Date - Start Date and Time detainee was assigned to bed
+
+Bed End Date - End Date and Time of bedding assignment. If NULL or blank Detainee is still assigned to bed
